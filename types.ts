@@ -1,3 +1,4 @@
+
 export interface Raffle {
   id: number;
   title: string;
@@ -19,6 +20,7 @@ declare global {
   }
 
   interface Window {
-    aistudio: AIStudio;
+    // FIX: Made `aistudio` optional to resolve the conflicting declaration error.
+    aistudio?: AIStudio;
   }
 }
